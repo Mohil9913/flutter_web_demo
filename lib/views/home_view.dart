@@ -19,7 +19,13 @@ class HomeView extends StatelessWidget {
               ScreenTypeLayout.builder(
                 mobile: (BuildContext context) => HomeMobileView(),
                 tablet: (BuildContext context) => HomeMobileView(),
-                desktop: (BuildContext context) => HomeDesktopView(),
+                desktop: (BuildContext context) {
+                  final screenHeight = MediaQuery.of(context).size.height;
+                  return ConstrainedBox(
+                    constraints: BoxConstraints(maxHeight: screenHeight * 0.8),
+                    child: HomeDesktopView(),
+                  );
+                },
               ),
             ],
           ),

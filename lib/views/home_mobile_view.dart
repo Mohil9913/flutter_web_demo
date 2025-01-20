@@ -11,6 +11,7 @@ class HomeMobileView extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(height: 50),
         CourseDetails(),
         SizedBox(height: 100),
         Center(child: JoinButton()),

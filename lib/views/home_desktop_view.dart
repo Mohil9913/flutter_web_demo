@@ -7,13 +7,11 @@ class HomeDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        children: [
-          CourseDetails(),
-          Expanded(child: Center(child: JoinButton())),
-        ],
-      ),
+    return Row(
+      children: [
+        Expanded(flex: 1, child: CourseDetails()),
+        Expanded(flex: 1, child: Center(child: JoinButton())),
+      ],
     );
   }
 }
